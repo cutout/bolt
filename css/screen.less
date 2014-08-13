@@ -264,18 +264,6 @@ h1, h2, h3, h4, h5 {
 
 /*Social*/
 
-@font-face {
-	font-family: 'Mono Social Icons Font';
-	src: url('../fonts/MonoSocialIconsFont-1.10.eot');
-	src: url('../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'), 
-		url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'), 
-		url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'), 
-		url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-	src: url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	}
-	
 .social {
 	text-align: center;
 	
@@ -295,27 +283,6 @@ h1, h2, h3, h4, h5 {
 	
 	a:hover, a:active {
 		border-color: #927780;
-		}
-	
-	.symbol, a.symbol:before {
-		font-family: 'Mono Social Icons Font';
-		-webkit-text-rendering: optimizeLegibility;
-		-moz-text-rendering: optimizeLegibility;
-		-ms-text-rendering: optimizeLegibility;
-		-o-text-rendering: optimizeLegibility;
-		text-rendering: optimizeLegibility;
-		-webkit-font-smoothing: antialiased;
-		-moz-font-smoothing: antialiased;
-		-ms-font-smoothing: antialiased;
-		-o-font-smoothing: antialiased;
-		font-smoothing: antialiased;
-		color: #d6cbd2;
-		}
-	
-	a.symbol:before {
-		content: attr(title);
-		font-size: 1.75em;
-		line-height: 26px;
 		}
 	}	
 
@@ -479,14 +446,10 @@ h1, h2, h3, h4, h5 {
 
 aside {
 	.widget-wrap {
-		border: 1px solid #d6d6d6;
-		background: #FFF;
 		padding-bottom: 10px;
 		}	
 	
 	.widget {
-		background: @bg-lt;
-		padding: 4px;
 		margin:15px 0;
 		
 		#s {
@@ -495,8 +458,6 @@ aside {
 		
 		h3.widgettitle {
 			font-size:1em;
-			padding: 8px 10px;
-			background: @bg-lt;
 			}
 		
 		li {
@@ -520,7 +481,7 @@ aside {
 			}	
 		
 		li, .tagcloud {
-			margin: 2px 10px;
+			margin: 2px 0;
 			}
 		
 		li:last-child {

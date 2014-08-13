@@ -3,10 +3,6 @@
 </section><!--/container-->
 
 
-	<ul class="social">			
-		<li><a href="http://www.twitter.com/" class="symbol" title="twitterbird" target="_blank"></a></li>
-      	<li><a href="https://www.facebook.com/" class="symbol" title="facebook" target="_blank"></a></li>
-	</ul>
 	
 
 <footer role="contentinfo">
@@ -25,9 +21,10 @@
     				<?php bloginfo('name'); ?>
     			</span> 
     			</div>
-			<div class="right"> 
-				More text here
-			</div>
+			<ul class="social right">			
+				<li><a href="http://www.twitter.com/" title="twitterbird" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      			<li><a href="https://www.facebook.com/" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+			</ul>
 		</section>	
 	</section>
 </footer>
