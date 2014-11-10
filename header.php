@@ -25,7 +25,6 @@
 
 </head>
 <body <?php body_class('loading'); ?>>
-
 <section class="container">
 
 	<header class="masthead clearfix" role="banner">
