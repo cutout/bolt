@@ -20,7 +20,7 @@
 /* Localization ********************************************/
 // This sets the basename of the theme for localization. 
 
-load_theme_textdomain('gravy');
+load_theme_textdomain('bolt');
 
 
 /* Add Thickbox ********************************************/
@@ -37,15 +37,16 @@ add_action( 'wp_enqueue_scripts', 'mason_script' );
 
 
 /* Enqueue JS & CSS ********************************************/
-add_action('init', 'gravy_load_scripts');
-add_action('init', 'gravy_styles_init');
-add_action('init', 'theme_enqueue_styles');
+add_action('init', 'bolt_load_scripts');
+add_action('init', 'bolt_styles_init');
 
 
-function gravy_load_scripts() {
+
+function bolt_load_scripts() {
        if (!is_admin()) {
-               add_action('wp_enqueue_scripts', 'gravy_scripts_init');
-               add_action('wp_enqueue_styles', 'gravy_styles_init');
+               add_action('wp_enqueue_scripts', 'bolt_scripts_init');
+               add_action('wp_enqueue_styles', 'bolt_styles_init');
+               add_action('init', 'theme_enqueue_styles');
        }
 }
 
@@ -56,14 +57,15 @@ function theme_enqueue_styles() {
 }
 
 
-function gravy_styles_init() {
+function bolt_styles_init() {
        if (!is_admin()) {
                wp_enqueue_style('style', get_template_directory_uri().'/style.css', null, '1.0', 'all');
+               wp_enqueue_style('fa', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', null, '1.0', 'all');
                wp_enqueue_style('ie', get_template_directory_uri().'/ie.css', null, '1.0', 'all');
                wp_enqueue_style('print', get_template_directory_uri().'/css/print.css', null, '1.0', 'print');
 }
 
-function gravy_scripts_init() {
+function bolt_scripts_init() {
 	  wp_deregister_script( 'jquery' );
       wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', null, '1.7.2', false);
       
@@ -90,7 +92,7 @@ function excerpt($limit) {
       $excerpt = explode(' ', get_the_excerpt(), $limit);
       if (count($excerpt)>=$limit) {
         array_pop($excerpt);
-        $excerpt = implode(" ",$excerpt).'… <a class="read-more" href="'. esc_url( get_permalink() ) . '">'.__('Read More','gravy').'</a>';
+        $excerpt = implode(" ",$excerpt).'… <a class="read-more" href="'. esc_url( get_permalink() ) . '">'.__('Read More','bolt').'</a>';
       } else {
         $excerpt = implode(" ",$excerpt);
       } 
@@ -119,7 +121,7 @@ function excerpt($limit) {
 add_filter( 'the_content_more_link', 'my_more_link', 10, 2 );
 
 function my_more_link( $more_link, $more_link_text ) {
-	return str_replace( $more_link_text, __('Continue reading&rarr;','gravy'), $more_link );
+	return str_replace( $more_link_text, __('Continue reading&rarr;','bolt'), $more_link );
 }
 
 
@@ -179,7 +181,7 @@ function search_title_highlight() {
 register_sidebar(
 		array(
 			'name'=>'Sidebar Widgets',
-			'description' => __('', 'gravy'),
+			'description' => __('', 'bolt'),
 			'before_widget' => '<section class="widget"><div class="widget-wrap clearfix">',
 			'after_widget' => '</div></section>',
 			'before_title' => '<h3 class="widgettitle">',
@@ -190,7 +192,7 @@ register_sidebar(
 register_sidebar(
 		array(
 			'name'=>'Footer Widgets',
-			'description' => __('', 'gravy'),
+			'description' => __('', 'bolt'),
 			'before_widget' => '<section class="widget"><div class="widget-wrap clearfix">',
 			'after_widget' => '</div></section>',
 			'before_title' => '<h4 class="widgettitle">',
@@ -243,7 +245,7 @@ function numeric_pagination ($pageCount = 9, $query = null) {
 <?php
 	if ($paged != 1) {
 ?>
-	<a href="<?php echo get_pagenum_link(1); ?>" class="numbered page-number-first"><span>&lsaquo; <?php _e('Newest', 'gravy'); ?></span></a>
+	<a href="<?php echo get_pagenum_link(1); ?>" class="numbered page-number-first"><span>&lsaquo; <?php _e('Newest', 'bolt'); ?></span></a>
 <?php
 	}
 	// first page is not visible...
@@ -266,7 +268,7 @@ function numeric_pagination ($pageCount = 9, $query = null) {
 	}
 	if ($paged != $query->max_num_pages) {
 ?>
-		<a href="<?php echo get_pagenum_link($query->max_num_pages); ?>" class="numbered page-number-last"><span><?php _e('Oldest', 'gravy'); ?> &rsaquo;</span></a>
+		<a href="<?php echo get_pagenum_link($query->max_num_pages); ?>" class="numbered page-number-last"><span><?php _e('Oldest', 'bolt'); ?> &rsaquo;</span></a>
 <?php } ?>
 	
 	</div>

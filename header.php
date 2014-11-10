@@ -9,7 +9,7 @@
 	if ( $site_description && ( is_home() || is_front_page() ) )
 		echo " | $site_description";
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'gravy' ), max( $paged, $page ) );
+		echo ' | ' . sprintf( __( 'Page %s', 'bolt' ), max( $paged, $page ) );
 	?>
 </title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -33,13 +33,13 @@
 			<div class="branding">
 	     		<?php if(is_home()) { ?>
 	     		<h1 class="logo">
-	    		    <a href="<?php echo home_url(); ?>/" title="<?php _e('Home','gravy'); ?>">
+	    		    <a href="<?php echo home_url(); ?>/" title="<?php _e('Home','bolt'); ?>">
 	     		    	<?php bloginfo('name'); ?>
 	      		    </a>
 	      		</h1>
 	      		<?php } else { ?>
 	      		<div class="logo">
-	      		    <a href="<?php echo home_url(); ?>/" title="<?php _e('Home','gravy'); ?>">
+	      		    <a href="<?php echo home_url(); ?>/" title="<?php _e('Home','bolt'); ?>">
 	     		    	<?php bloginfo('name'); ?>
 	      		    </a>
 	      		</div>	

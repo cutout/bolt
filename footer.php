@@ -4,8 +4,8 @@
 
 
 	<ul class="social">			
-		<li><a href="http://www.twitter.com/" class="symbol" title="twitterbird" target="_blank"></a></li>
-      	<li><a href="https://www.facebook.com/" class="symbol" title="facebook" target="_blank"></a></li>
+		<li><a href="http://www.twitter.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="http://www.facebook.com/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 	</ul>
 	
 

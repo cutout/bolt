@@ -13,7 +13,7 @@
 	
 	<section class="widget more-in">
 		<div class="widget-wrap">
-			<h3 class="widgettitle"><?php _e('More in','gravy'); ?> &#8216;<?php echo $category->name; ?>&#8217;</h3>
+			<h3 class="widgettitle"><?php _e('More in','bolt'); ?> &#8216;<?php echo $category->name; ?>&#8217;</h3>
 				<ul>
 				<?php foreach($posts as $post) : ?>
 					<li>

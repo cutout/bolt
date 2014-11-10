@@ -253,6 +253,9 @@ h5 {
 .nav-bg .nav {
   *zoom: 1;
   height: 42px;
+  /*Second Tier Menu*/
+  /*Third Tier Menu*/
+
 }
 .nav-bg .nav li {
   position: relative;
@@ -309,15 +312,15 @@ h5 {
 .nav-bg .nav .sub-menu a:active {
   background: #efefef;
 }
-/*Social*/
-@font-face {
-  font-family: 'Mono Social Icons Font';
-  src: url('../fonts/MonoSocialIconsFont-1.10.eot');
-  src: url('../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'), url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'), url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'), url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-  src: url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+.nav-bg .nav .sub-menu .sub-menu {
+  display: none;
 }
+.nav-bg .nav .sub-menu li.menu-item-has-children:hover .sub-menu {
+  display: block;
+  left: 190px;
+  top: 0;
+}
+/*Social*/
 .social {
   text-align: center;
 }
@@ -339,26 +342,6 @@ h5 {
 .social a:hover,
 .social a:active {
   border-color: #927780;
-}
-.social .symbol,
-.social a.symbol:before {
-  font-family: 'Mono Social Icons Font';
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
-  -ms-text-rendering: optimizeLegibility;
-  -o-text-rendering: optimizeLegibility;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  color: #d6cbd2;
-}
-.social a.symbol:before {
-  content: attr(title);
-  font-size: 1.75em;
-  line-height: 26px;
 }
 /*Misc*/
 .TB_overlayBG {
@@ -406,7 +389,7 @@ h5 {
 .logo a:visited {
   width: 112px;
   height: 112px;
-  background: url(../images/logo.png);
+  background: url(../images/logo.png) no-repeat;
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
@@ -737,27 +720,47 @@ a.button,
 a.button:visited,
 .button,
 input[type=submit] {
-  border-color: #BBB #BBB #999;
-  border-style: solid;
-  border-width: 1px;
-  cursor: pointer;
-  box-shadow: 0 1px 0 #e9e9e9;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.85);
+  background: #333;
+  color: #fff;
+  padding: 12px 32px;
+  text-transform: uppercase;
+  letter-spacing: .01em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  padding: 12px 32px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+a.button:hover,
+a.button:active,
+.button:hover,
+.button:active,
+input[type=submit]:hover,
+input[type=submit]:focus {
+  outline: none;
+  background: #000;
+}
+a.button.chrome,
+a.button.chrome:visited,
+input[type=submit].button.chrome {
+  border-color: #BBB #BBB #999;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 0 #e9e9e9;
   background: #ffffff;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e9e9e9), color-stop(1, #fefefe));
   background: -ms-linear-gradient(bottom, #e9e9e9, #fefefe);
   background: -moz-linear-gradient(center bottom, #e9e9e9 0%, #fefefe 100%);
   background: -o-linear-gradient(#fefefe, #e9e9e9);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#e9e9e9', GradientType=0);
-  color: #505050;
+  color: #111;
 }
-a.button:hover,
-.button:hover,
-input[type=submit]:hover {
+a.button.chrome:hover,
+.button.chrome:hover,
+input[type=submit].button.chrome:hover {
   border-color: #999 #999 #666;
   background: #ffffff;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #dcdcdc), color-stop(1, #fefefe));
@@ -767,8 +770,8 @@ input[type=submit]:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#dcdcdc', GradientType=0);
   color: #111111;
 }
-a.button:active,
-input[type=submit]:active {
+a.button.chrome:active,
+input[type=submit].button.chrome:focus {
   -webkit-box-shadow: inset 0 1px 3px rgba(20, 20, 20, 0.25);
   -moz-box-shadow: inset 0 1px 3px rgba(20, 20, 20, 0.25);
   box-shadow: inset 0 1px 3px rgba(20, 20, 20, 0.25);

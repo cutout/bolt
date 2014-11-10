@@ -4,6 +4,6 @@
 	</h1>
 	<section class="entry">
 		<?php the_content(); ?>
-		<?php edit_post_link(__('Edit this entry','gravy'), '<p class="wp-edit">', '&rarr;</p>'); ?>
+		<?php edit_post_link(__('Edit this entry','bolt'), '<p class="wp-edit">', '&rarr;</p>'); ?>
 	</section>
 </article>
