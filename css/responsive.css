@@ -1,9 +1,9 @@
 /* 
 // =======================================================================
-// < 1140px
+// < 1280px
 // =======================================================================
 */
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1280px) {
   body {
     min-width: 0;
     max-width: 1140px;
@@ -102,6 +102,8 @@
   .nav-bg .nav a:visited {
     color: #bebebe !important;
     border-bottom: 1px solid #666;
+    display: block;
+    padding: 8px 0;
   }
   .nav-bg .nav a:hover,
   .nav-bg .nav a:active {
@@ -240,10 +242,10 @@
 }
 /* 
 // =======================================================================
-// < 767px
+// < 768px
 // =======================================================================
 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   /*Structure*/
   .container {
     padding: 0;
