@@ -3,7 +3,7 @@
 <section class="row clearfix">
 	<div class="col-content">
 		<h1 class="pagetitle">
-			<?php _e('Author Archives','gravy'); ?>
+			<?php _e('Author Archives','bolt'); ?>
 		</h1>
 		<div class="writer clearfix">
         	<?php

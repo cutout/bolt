@@ -230,7 +230,8 @@ h1, h2, h3, h4, h5 {
 	    	left: 0;
 	    	top: 34px;
 	    	}
-	    	
+	    
+	    /*Second Tier Menu*/	
 	    .sub-menu {
 	    	position: absolute;
 	    	left: -9999px;
@@ -249,6 +250,18 @@ h1, h2, h3, h4, h5 {
 	    	a:hover, a:active {
 	    		background:#efefef;
 	    		}	
+	    	}
+	    
+	    
+	    /*Third Tier Menu*/
+	    .sub-menu .sub-menu {
+	    	display:none;
+	    	}
+	    
+	    .sub-menu li.menu-item-has-children:hover .sub-menu {
+	    	display:block;
+	    	left:190px;	
+	    	top:0;	
 	    	}
 		 }
 	}
@@ -336,7 +349,7 @@ h1, h2, h3, h4, h5 {
 .logo a, .logo a:visited {
 	width:112px;
 	height: 112px;
-	background: url(../images/logo.png);
+	background: url(../images/logo.png) no-repeat;
 	.image-replace;
 	}
 
@@ -742,25 +755,40 @@ input:focus, textarea:focus {
 	}
 
 a.button, a.button:visited, .button, input[type=submit] {
+	background:#333;
+	color:#fff;
+	padding: 12px 32px;
+	text-transform:uppercase;
+	letter-spacing:.01em;
+	.rounded(3px);
+	cursor: pointer;
+	-webkit-appearance: none;
+   	-moz-appearance: none;
+   	appearance: none; 
+   	border:none;
+	}
+
+a.button:hover, a.button:active, .button:hover, .button:active, input[type=submit]:hover, input[type=submit]:focus {
+	outline:none;
+	background:#000;
+	}
+
+a.button.chrome, a.button.chrome:visited, input[type=submit].button.chrome,  {
 	border-color: #BBB #BBB #999;
 	border-style: solid;
 	border-width: 1px;
-	cursor: pointer;
 	box-shadow: 0 1px 0 #e9e9e9;
-	text-shadow: 0 1px rgba(255,255,255,.85);
-	.rounded;
-	padding: 12px 32px;
 	.chrome-gradient;
-	color:@text-color-lt;
+	color:#111;
 	}
 
-a.button:hover, .button:hover, input[type=submit]:hover {
+a.button.chrome:hover, .button.chrome:hover, input[type=submit].button.chrome:hover {
 	border-color: #999 #999 #666;
 	.chrome-gradient(#FFF, #dcdcdc, #fefefe);
 	color:@text-color;
 	}
 
-a.button:active, input[type=submit]:active {
+a.button.chrome:active, input[type=submit].button.chrome:focus {
 	.inner-shadow;
 	}
 

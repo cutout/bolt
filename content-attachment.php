@@ -7,7 +7,7 @@
 	</h1>
 	<section class="entry">
 		<?php echo $attachment_link; ?>
-        <p><a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment">&laquo;<?php _e('Back','gravy'); ?></a></p>
+        <p><a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment">&laquo;<?php _e('Back','bolt'); ?></a></p>
 	</section>
 </article>
 
