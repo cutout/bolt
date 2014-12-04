@@ -535,10 +535,6 @@ article .postmetadata {
 article .postmetadata em {
   text-transform: lowercase;
 }
-article .commentcount {
-  padding-left: 17px;
-  background: url(../images/bubble.png) no-repeat;
-}
 article blockquote {
   padding: 0 18px;
   margin: 25px 45px;

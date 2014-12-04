@@ -6,6 +6,6 @@
 
 		&bull; 
 		<span class="commentcount">
-			(<?php comments_popup_link('0', '1', '%'); ?>)
+			<i class="fa fa-comment-o"></i> (<?php comments_popup_link('0', '1', '%'); ?>)
 		</span>
 	</div>
