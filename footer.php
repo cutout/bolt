@@ -2,14 +2,6 @@
 	<div class="push"></div>
 </section><!--/container-->
 
-
-	<ul class="social">			
-		<li><a href="http://www.twitter.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-		<li><a href="http://www.facebook.com/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-	</ul>
-
-	
-
 <footer role="contentinfo">
 	
 	<?php if (function_exists('dynamic_sidebar')) { ?>
@@ -17,7 +9,6 @@
     		<?php dynamic_sidebar('Footer Widgets'); ?>
     	</section>
     <?php } ?>
-	
 	
 	<section class="footer-wrap">
 		<section class="row clearfix">
@@ -30,12 +21,10 @@
 				<li><a href="http://www.twitter.com/" title="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
       			<li><a href="https://www.facebook.com/" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 			</ul>
+			<?php wp_footer(); ?>
 		</section>	
 	</section>
 </footer>
-
-<?php wp_footer(); ?>
-
 
 <script src="<?php bloginfo('template_url'); ?>/js/responsive.js"></script> 
 
